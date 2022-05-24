@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 
@@ -73,6 +72,12 @@ namespace TerytSearcher
                 tempStreet += " " + reader.ReadElementContentAsString();
                 miejscowosci[tempCode].Add($"{tempStreet} {tempName1}");
             } while (reader.ReadToFollowing("row"));
+
+
+            //Konsolowe UI
+            //Walidacja kodu TERYT można przeprowadzić na wiele sposobów:
+            // - sprawdzić czy kod istnieje w bazie
+            // - sprawdzić poprawność na podstawie budowy kodu (np. długość, w przypadku gminy czy pierwsze 2 cyfry tworzą liczbę parzystą itp.)
 
             Console.WriteLine("Wczytano ulice\n");
             Console.WriteLine("Aby wyświetlić pomoc, wpisz komendę help.");
