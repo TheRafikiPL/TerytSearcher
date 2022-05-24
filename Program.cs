@@ -15,7 +15,7 @@ namespace TerytSearcher
             Dictionary<string, List<string>> miejscowosci = new Dictionary<string, List<string>>();
 
             //Wczytanie gmin
-            var reader = XmlReader.Create("database\\TERC_Urzedowy_2022-05-23.xml");
+            var reader = XmlReader.Create("database/TERC_Urzedowy_2022-05-23.xml");
             string tempCode;
             
             do
@@ -38,7 +38,7 @@ namespace TerytSearcher
             Console.WriteLine("Wczytano gminy");
 
             //Wczytanie miejscowości
-            reader = XmlReader.Create("database\\SIMC_Urzedowy_2022-05-23.xml");
+            reader = XmlReader.Create("database/SIMC_Urzedowy_2022-05-23.xml");
             do
             {
                 reader.MoveToFirstAttribute();
@@ -60,7 +60,7 @@ namespace TerytSearcher
 
             //Wczytywanie ulic
             string tempStreet, tempName1;
-            reader = XmlReader.Create("database\\ULIC_Urzedowy_2022-05-23.xml");
+            reader = XmlReader.Create("database/ULIC_Urzedowy_2022-05-23.xml");
             do
             {
                 reader.ReadToFollowing("SYM");
